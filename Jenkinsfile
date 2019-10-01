@@ -9,4 +9,5 @@ pipeline {
    stage("Compile") {
     sh "./gradlew compileJava"
     }
+  }
 } 
