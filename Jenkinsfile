@@ -15,5 +15,6 @@ pipeline {
      steps {
       sh "./gradlew jacocoTestReport"
       sh "./gradlew jacocoTestCoverageVerification"
+    }
   }
 } 
