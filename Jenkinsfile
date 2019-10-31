@@ -1,6 +1,9 @@
 pipeline {
   agent any
   stages {
+    stage('lock env') {
+    lock('lock1') {
+    }
     stage("Checkout") {
       steps {
         git url: 'https://github.com/lintmint/calculator.git'
@@ -24,6 +27,7 @@ pipeline {
           ])
 */
 //          sh "./gradlew jacocoTestCoverageVerification"
+     } // end env lock
       }
     }
   }
