@@ -1,8 +1,8 @@
 pipeline {
   agent any
   stages {
-    lock('lock1') {
     stage("Checkout") {
+          lock('lock1') {
       steps {
         git url: 'https://github.com/lintmint/calculator.git'
       }
