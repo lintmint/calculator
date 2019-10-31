@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('lock env') {
+    stage("Lockit") {
     lock('lock1') {
     }
     stage("Checkout") {
